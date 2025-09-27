@@ -41,129 +41,76 @@
 
     <header class="mb-10 text-center">
         <h1 class="text-4xl font-bold text-slate-900">Technical Backlog Dashboard</h1>
-        <p class="text-slate-600 mt-2 text-lg">Pod-Based Kanban View</p>
+        <p class="text-slate-600 mt-2 text-lg">Single Kanban Dashboard with Specialist Swimlanes</p>
     </header>
 
     <div class="space-y-12">
 
-        <!-- =============================================================== -->
-        <!-- SecurityOps Pod -->
-        <!-- =============================================================== -->
+        <!-- Security Focus Swimlane -->
         <section id="security-ops">
             <div class="border-b-2 border-slate-200 mb-4 pb-3">
-                <h2 class="text-2xl font-bold text-red-700">Pod: SecurityOps</h2>
-                <p class="text-slate-500">Focus: Platform security, compliance, and threat mitigation.</p>
+                <h2 class="text-2xl font-bold text-red-700">Swimlane: Security & Compliance</h2>
+                <p class="text-slate-500">Tasks requiring security and compliance expertise.</p>
             </div>
             <div class="kanban-scroll flex space-x-6 pb-4 overflow-x-auto">
-                <!-- To Do Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm">
                     <h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">To Do</h3>
                     <div class="p-4 space-y-4">
-                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500">
-                            <h4 class="font-semibold">2. Apply critical security patches</h4>
-                            <p class="text-sm text-slate-500 mt-1">Owner: Security Team</p>
-                        </div>
-                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500">
-                            <h4 class="font-semibold">4. Review and rotate API keys</h4>
-                            <p class="text-sm text-slate-500 mt-1">Owner: A. Turing</p>
-                        </div>
+                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500"><h4 class="font-semibold">2. Apply critical security patches</h4><p class="text-sm text-slate-500 mt-1">Owner: Security Team</p></div>
+                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500"><h4 class="font-semibold">4. Review and rotate API keys</h4><p class="text-sm text-slate-500 mt-1">Owner: A. Turing</p></div>
+                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-slate-400"><h4 class="font-semibold">7. Implement log retention policy</h4><p class="text-sm text-slate-500 mt-1">Owner: Compliance Team</p></div>
                     </div>
                 </div>
-                <!-- In Progress Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm">
                     <h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Progress <span class="text-sm font-normal text-slate-500">(WIP: 1)</span></h3>
-                    <div class="p-4 space-y-4">
-                         <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500">
-                            <h4 class="font-semibold">9. Conduct penetration test</h4>
-                            <p class="text-sm text-slate-500 mt-1">Owner: Third-Party Vendor</p>
-                        </div>
-                    </div>
+                    <div class="p-4 space-y-4"><div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500"><h4 class="font-semibold">9. Conduct penetration test</h4><p class="text-sm text-slate-500 mt-1">Owner: Third-Party Vendor</p></div></div>
                 </div>
-                <!-- Blocked Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">Blocked</h3><div class="p-4"></div></div>
-                <!-- In Review Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Review</h3><div class="p-4"></div></div>
-                <!-- Done Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">Done</h3><div class="p-4"></div></div>
             </div>
         </section>
 
-        <!-- =============================================================== -->
-        <!-- DevOps Pod -->
-        <!-- =============================================================== -->
+        <!-- DevOps & Application Focus Swimlane -->
         <section id="dev-ops">
             <div class="border-b-2 border-slate-200 mb-4 pb-3">
-                <h2 class="text-2xl font-bold text-blue-700">Pod: DevOps</h2>
-                <p class="text-slate-500">Focus: Application framework, developer experience, and accessibility.</p>
+                <h2 class="text-2xl font-bold text-blue-700">Swimlane: Application & DevOps</h2>
+                <p class="text-slate-500">Tasks related to the core application, framework, and pipelines.</p>
             </div>
             <div class="kanban-scroll flex space-x-6 pb-4 overflow-x-auto">
-                <!-- To Do Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm">
                     <h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">To Do</h3>
                     <div class="p-4 space-y-4">
-                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500">
-                            <h4 class="font-semibold">1. Upgrade web framework</h4>
-                            <p class="text-sm text-slate-500 mt-1">Owner: Core Dev Team</p>
-                        </div>
-                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
-                            <h4 class="font-semibold">5. Perform accessibility audit</h4>
-                            <p class="text-sm text-slate-500 mt-1">Owner: Frontend Team</p>
-                        </div>
-                         <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500">
-                            <h4 class="font-semibold">10. Update CI/CD pipelines</h4>
-                            <p class="text-sm text-slate-500 mt-1">Owner: G. Hopper</p>
-                        </div>
+                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500"><h4 class="font-semibold">1. Upgrade web framework</h4><p class="text-sm text-slate-500 mt-1">Owner: Core Dev Team</p></div>
+                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500"><h4 class="font-semibold">5. Perform accessibility audit</h4><p class="text-sm text-slate-500 mt-1">Owner: Frontend Team</p></div>
+                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500"><h4 class="font-semibold">10. Update CI/CD pipelines</h4><p class="text-sm text-slate-500 mt-1">Owner: G. Hopper</p></div>
                     </div>
                 </div>
-                <!-- In Progress Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Progress <span class="text-sm font-normal text-slate-500">(WIP: 2)</span></h3><div class="p-4"></div></div>
-                <!-- Blocked Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">Blocked</h3><div class="p-4"></div></div>
-                <!-- In Review Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Review</h3><div class="p-4"></div></div>
-                <!-- Done Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">Done</h3><div class="p-4"></div></div>
             </div>
         </section>
 
-        <!-- =============================================================== -->
-        <!-- ITOps & DBOps Pod -->
-        <!-- =============================================================== -->
+        <!-- Infrastructure & Data Focus Swimlane -->
         <section id="it-db-ops">
             <div class="border-b-2 border-slate-200 mb-4 pb-3">
-                <h2 class="text-2xl font-bold text-green-700">Pod: ITOps & DBOps</h2>
-                <p class="text-slate-500">Focus: Infrastructure, monitoring, data integrity, and performance.</p>
+                <h2 class="text-2xl font-bold text-green-700">Swimlane: Infrastructure & Data</h2>
+                <p class="text-slate-500">Tasks for infrastructure, monitoring, and database performance.</p>
             </div>
             <div class="kanban-scroll flex space-x-6 pb-4 overflow-x-auto">
-                <!-- To Do Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm">
                     <h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">To Do</h3>
                     <div class="p-4 space-y-4">
-                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-yellow-500">
-                            <h4 class="font-semibold">3. Set up automated monitoring</h4>
-                            <p class="text-sm text-slate-500 mt-1">Owner: SRE Team</p>
-                        </div>
-                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-yellow-500">
-                            <h4 class="font-semibold">8. Optimise slow database queries</h4>
-                            <p class="text-sm text-slate-500 mt-1">Owner: DBA Team</p>
-                        </div>
-                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-slate-400">
-                            <h4 class="font-semibold">6. Update disaster recovery docs</h4>
-                            <p class="text-sm text-slate-500 mt-1">Owner: M. Hamilton</p>
-                        </div>
-                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-slate-400">
-                            <h4 class="font-semibold">7. Implement log retention policy</h4>
-                            <p class="text-sm text-slate-500 mt-1">Owner: Compliance Team</p>
-                        </div>
+                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-yellow-500"><h4 class="font-semibold">3. Set up automated monitoring</h4><p class="text-sm text-slate-500 mt-1">Owner: SRE Team</p></div>
+                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-yellow-500"><h4 class="font-semibold">8. Optimise slow database queries</h4><p class="text-sm text-slate-500 mt-1">Owner: DBA Team</p></div>
+                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-slate-400"><h4 class="font-semibold">6. Update disaster recovery docs</h4><p class="text-sm text-slate-500 mt-1">Owner: M. Hamilton</p></div>
                     </div>
                 </div>
-                <!-- In Progress Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Progress <span class="text-sm font-normal text-slate-500">(WIP: 2)</span></h3><div class="p-4"></div></div>
-                <!-- Blocked Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">Blocked</h3><div class="p-4"></div></div>
-                <!-- In Review Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Review</h3><div class="p-4"></div></div>
-                <!-- Done Column -->
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">Done</h3><div class="p-4"></div></div>
             </div>
         </section>
@@ -172,3 +119,4 @@
 
 </body>
 </html>
+
