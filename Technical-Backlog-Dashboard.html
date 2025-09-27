@@ -3,45 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Backlog - Kanban Board</title>
+    <title>Technical Backlog - Single Team Kanban Board</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .task-card {
-            transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-            cursor: pointer;
-        }
-        .task-card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
-        }
-        /* Scrollbar styling for a cleaner look */
-        .kanban-scroll::-webkit-scrollbar {
-            height: 8px;
-        }
-        .kanban-scroll::-webkit-scrollbar-track {
-            background: #f1f5f9; /* slate-100 */
-            border-radius: 10px;
-        }
-        .kanban-scroll::-webkit-scrollbar-thumb {
-            background: #cbd5e1; /* slate-300 */
-            border-radius: 10px;
-        }
-        .kanban-scroll::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; /* slate-400 */
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .task-card { transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out; cursor: pointer; }
+        .task-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); transform: translateY(-2px); }
+        .kanban-scroll::-webkit-scrollbar { height: 8px; }
+        .kanban-scroll::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 10px; }
+        .kanban-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .kanban-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 p-4 sm:p-6 md:p-8">
 
     <header class="mb-10 text-center">
         <h1 class="text-4xl font-bold text-slate-900">Technical Backlog Dashboard</h1>
-        <p class="text-slate-600 mt-2 text-lg">Single Kanban Dashboard with Specialist Swimlanes</p>
+        <p class="text-slate-600 mt-2 text-lg">Single Team View with Specialist Swimlanes</p>
     </header>
 
     <div class="space-y-12">
@@ -56,14 +37,16 @@
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm">
                     <h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">To Do</h3>
                     <div class="p-4 space-y-4">
-                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500"><h4 class="font-semibold">2. Apply critical security patches</h4><p class="text-sm text-slate-500 mt-1">Owner: Security Team</p></div>
+                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500"><h4 class="font-semibold">9. Conduct penetration test</h4><p class="text-sm text-slate-500 mt-1">Owner: Third-Party Vendor</p></div>
                         <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500"><h4 class="font-semibold">4. Review and rotate API keys</h4><p class="text-sm text-slate-500 mt-1">Owner: A. Turing</p></div>
                         <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-slate-400"><h4 class="font-semibold">7. Implement log retention policy</h4><p class="text-sm text-slate-500 mt-1">Owner: Compliance Team</p></div>
                     </div>
                 </div>
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm">
-                    <h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Progress <span class="text-sm font-normal text-slate-500">(WIP: 1)</span></h3>
-                    <div class="p-4 space-y-4"><div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500"><h4 class="font-semibold">9. Conduct penetration test</h4><p class="text-sm text-slate-500 mt-1">Owner: Third-Party Vendor</p></div></div>
+                    <h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Progress <span class="text-sm font-normal text-slate-500">(WIP: 1/1)</span></h3>
+                    <div class="p-4 space-y-4">
+                         <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500"><h4 class="font-semibold">2. Apply critical security patches</h4><p class="text-sm text-slate-500 mt-1">Owner: Security Team</p></div>
+                    </div>
                 </div>
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">Blocked</h3><div class="p-4"></div></div>
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Review</h3><div class="p-4"></div></div>
@@ -81,12 +64,16 @@
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm">
                     <h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">To Do</h3>
                     <div class="p-4 space-y-4">
-                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500"><h4 class="font-semibold">1. Upgrade web framework</h4><p class="text-sm text-slate-500 mt-1">Owner: Core Dev Team</p></div>
                         <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500"><h4 class="font-semibold">5. Perform accessibility audit</h4><p class="text-sm text-slate-500 mt-1">Owner: Frontend Team</p></div>
                         <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-blue-500"><h4 class="font-semibold">10. Update CI/CD pipelines</h4><p class="text-sm text-slate-500 mt-1">Owner: G. Hopper</p></div>
                     </div>
                 </div>
-                <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Progress <span class="text-sm font-normal text-slate-500">(WIP: 2)</span></h3><div class="p-4"></div></div>
+                <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm">
+                    <h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Progress <span class="text-sm font-normal text-slate-500">(WIP: 1/2)</span></h3>
+                    <div class="p-4 space-y-4">
+                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-red-500"><h4 class="font-semibold">1. Upgrade web framework</h4><p class="text-sm text-slate-500 mt-1">Owner: Core Dev Team</p></div>
+                    </div>
+                </div>
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">Blocked</h3><div class="p-4"></div></div>
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Review</h3><div class="p-4"></div></div>
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">Done</h3><div class="p-4"></div></div>
@@ -103,12 +90,16 @@
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm">
                     <h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">To Do</h3>
                     <div class="p-4 space-y-4">
-                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-yellow-500"><h4 class="font-semibold">3. Set up automated monitoring</h4><p class="text-sm text-slate-500 mt-1">Owner: SRE Team</p></div>
                         <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-yellow-500"><h4 class="font-semibold">8. Optimise slow database queries</h4><p class="text-sm text-slate-500 mt-1">Owner: DBA Team</p></div>
                         <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-slate-400"><h4 class="font-semibold">6. Update disaster recovery docs</h4><p class="text-sm text-slate-500 mt-1">Owner: M. Hamilton</p></div>
                     </div>
                 </div>
-                <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Progress <span class="text-sm font-normal text-slate-500">(WIP: 2)</span></h3><div class="p-4"></div></div>
+                <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm">
+                    <h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Progress <span class="text-sm font-normal text-slate-500">(WIP: 1/2)</span></h3>
+                    <div class="p-4 space-y-4">
+                        <div class="task-card bg-white p-4 rounded-lg shadow-sm border-l-4 border-yellow-500"><h4 class="font-semibold">3. Set up automated monitoring</h4><p class="text-sm text-slate-500 mt-1">Owner: SRE Team</p></div>
+                    </div>
+                </div>
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">Blocked</h3><div class="p-4"></div></div>
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">In Review</h3><div class="p-4"></div></div>
                 <div class="flex-shrink-0 w-80 bg-slate-100 rounded-xl shadow-sm"><h3 class="font-semibold text-lg p-4 border-b border-slate-200 sticky top-0 bg-slate-100 rounded-t-xl">Done</h3><div class="p-4"></div></div>
@@ -119,4 +110,3 @@
 
 </body>
 </html>
-
